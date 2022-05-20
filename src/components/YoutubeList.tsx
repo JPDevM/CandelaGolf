@@ -2,10 +2,10 @@ import React, { Fragment } from 'react';
 
 export const YoutubeList = () => {
   const links = [
-    'https://www.youtube-nocookie.com/embed/videoseries?controls=0&amp;list=PLhEZHRHHBAHjBvoxonXkma7zCwwKvQm95;autoplay=1',
-    'https://www.youtube-nocookie.com/embed/videoseries?controls=0&amp;list=PLhEZHRHHBAHjBvoxonXkma7zCwwKvQm95;autoplay=1',
-    'https://www.youtube-nocookie.com/embed/videoseries?controls=0&amp;list=PLhEZHRHHBAHjBvoxonXkma7zCwwKvQm95;autoplay=1',
-    'https://www.youtube-nocookie.com/embed/videoseries?controls=0&amp;list=PLhEZHRHHBAHjBvoxonXkma7zCwwKvQm95;autoplay=1',
+    'https://www.youtube.com/embed/WbBbsPDF5OQ',
+    'https://www.youtube.com/embed/_I26FAHxVEY',
+    'https://www.youtube.com/embed/7f_LjrrAuoo',
+    'https://www.youtube.com/embed/zND-seMFALA',
     // 'https://www.youtube-nocookie.com/embed/videoseries?controls=0&amp;list=PLhEZHRHHBAHjBvoxonXkma7zCwwKvQm95;autoplay=1',
     // 'https://www.youtube-nocookie.com/embed/videoseries?controls=0&amp;list=PLhEZHRHHBAHjBvoxonXkma7zCwwKvQm95;autoplay=1',
   ];
@@ -17,7 +17,7 @@ export const YoutubeList = () => {
         {links.map((link) => (
           <div className="box">
             <iframe
-              className="embed-responsive-item w-full h-48"
+              className="embed-responsive-item w-full"
               src={link}
               title="YouTube video player"
               frameBorder="0"

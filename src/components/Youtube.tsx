@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 
-import YoutubeList from './YoutubeList';
 
 export const Youtube = () => {
   return (
@@ -14,8 +13,6 @@ export const Youtube = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />
-      {/* List */}
-      <YoutubeList />
     </Fragment>
   );
 };
