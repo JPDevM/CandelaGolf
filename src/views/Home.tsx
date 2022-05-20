@@ -1,8 +1,13 @@
 import React, { Fragment } from 'react';
 
+import Youtube from '../components/Youtube'
+
 import Profile1 from '../images/profile/profile-1.jpeg';
 
+
+
 const Home = () => {
+const API_KEY = 'AIzaSyClqThNUw8LgdC5Ckt6AZ6iJ801myDGyKY';
   return (
     <Fragment>
       <main>
@@ -22,7 +27,8 @@ const Home = () => {
                     Juan Pablo Candela
                   </h1>
                   <p className='pt-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et atque deserunt sint perspiciatis veniam placeat officiis voluptatibus enim tempore, officia ratione fugiat excepturi alias eaque repudiandae, vero reprehenderit error cum!</p>
-                </div>
+                <div className="p-8">
+                <Youtube />
               </div>
             </div>
           </div>
