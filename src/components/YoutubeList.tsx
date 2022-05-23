@@ -13,7 +13,7 @@ export const YoutubeList = () => {
     <Fragment>
       {/* Grid */}
 
-      <div className="grid overflow-hidden grid-cols-4 grid-rows-1 gap-2 p-4">
+      <div className="grid overflow-hidden grid-cols-1 grid-rows-1 md:grid-cols-4 md:grid-rows-1 gap-2 p-4">
         {links.map((link) => (
           <div className="box">
             <iframe

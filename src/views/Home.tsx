@@ -8,7 +8,7 @@ const Home = () => {
     <Fragment>
       <main>
         <div className="w-screen h-screen bg-white">
-          <div className="grid grid-cols-2 h-screen">
+          <div className="grid grid-cols-1 h-screen md:grid-cols-2">
             <div className="text-center text-gray-400">
               <Media />
             </div>

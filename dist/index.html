@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>⚡️ Vite + React + Tailwind</title>
-  <meta property="og:image" content="https://og-image.vercel.app/%E2%9A%A1%EF%B8%8F%20Vite%20+%20React%20+%20Tailwind.png" />
-  <script type="module" crossorigin src="/assets/index.a246da8d.js"></script>
-  <link rel="stylesheet" href="/assets/index.11f2d833.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <!-- https://realfavicongenerator.net -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.70f205bf.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+  <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACWFBMVEUAAADb293S0tXz8/Lk5OXR0dPs7OvLy8zp6enGxsjt7e2bm52qqqytra+mpqirq62jo6WysrTExMZSUlTZ2drc3N3g4OHk5OXn5+jq6urs7Ozr6+vNzs/S0tTW19jb293v7+/v7+/u7u7q6urIyMrLy83Q0NHx8fHt7e7l5eXExMbHyMnv7+/r6+u9vb+/wMLq6urk5OS6ury7vL7p6enh4eK2trjc3N2zs7XU1NWxsbPLy8ywsLLAwMKxsbOnp6m5ubu3t7m0tLapqauvr7GxsbKsrK6jo6Wnp6mpqauxsbOnp6menqChoaOioqSnp6murrCkpKaenqCZmZuampycnJ6enqCkpKampqigoKKcnJ6ampyampyampycnJ6enqDg4OHm5ufr6+vu7u7W1tjd3d7k5OTx8fHz8/P19fX09PTPz9DY2Nnh4eLo6Onv7+/39/f5+fn6+vr4+PjFxsfQ0NHa2tvj4+Ps7Oz7+/v29vbw8PHExMXZ2tvl5eXy8vLw8PC1tri/v8HMzc7Z2drp6en19fbr6+zj4+SxsbO9vb/JycvT09Xc3N3i4uPo6Ojt7e3l5ebc3Nytra+2trfAwMLLy8zT09Tb29zh4eHk5OXf39/a2trS0tOoqKqrq622trjBwcPMzM3R0dLV1dbX19jNzc7FxcelpaesrK28vL7Dw8TGxsfIyMnHx8nFxca/v8CgoKKioqSvr7Gzs7W3t7i3t7m5ubqxsbKdnZ+enqCjo6Wmpqiqqqypqaunp6mZmpyZmZucnJ6fn6GWlpiXl5mYmJr////rIL1zAAAAYHRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAABlgosG/nFYTBFTI+fa/SQMFdvLsZgJa8+xJH86+E2/79VaymdK70r61oXX8+GEk1McZZffxVAiE9/JyBAhi1Pz7zlYEI3S00dK0bx5XnvnpAAAAAWJLR0THjQVKWwAAAAd0SU1FB+YFFwglBZ9tx7kAAAEbSURBVBjTARAB7/4AAAABAhQVFhcYGRobAwQAAAAABRwdHh9gYWJjICEiIwYAAAckJSZkZWZiZ2hpaicoKQgACSora2xtbm9wcXJzaCwtCgAuL3R1dnd4aHNyeXF6ezAxADIzfGt9fnh/c3FxcGmANDUANoGCg4R3hWdoeoZpZ4eINwA4iYqLjI2Oj5CQY5BikZI5ADqTlJWWl5hgmZptYJucnTsAPJ6foKGio6SchHalo6anPQA+P6ipoKqrrK2trq98sEBBAEJDsbKes7S1tregoLS4REUAC0ZHubq7vJ69vr2ev0hJDAANSktMwMHCubrDusNNTk8OAAAPUFFSU8TFxsZUVVZXEAAAAAARElhZWltcXV5fExAAAC5ZZISWMHaIAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA1LTIzVDA4OjM3OjA1KzAwOjAwkreHTwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNS0yM1QwODozNzowNSswMDowMOPqP/MAAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII=">
+  <link rel="manifest" href="data:application/manifest+json;base64,ewogICAgIm5hbWUiOiAiIiwKICAgICJzaG9ydF9uYW1lIjogIiIsCiAgICAiaWNvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS0xOTJ4MTkyLnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS0yNTZ4MjU2LnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICIyNTZ4MjU2IiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0KICAgIF0sCiAgICAidGhlbWVfY29sb3IiOiAiI2ZmZmZmZiIsCiAgICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmZmZmIiwKICAgICJkaXNwbGF5IjogInN0YW5kYWxvbmUiCn0K">
+  <link rel="mask-icon" href="/assets/safari-pinned-tab.1dce806a.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/assets/favicon.4bc78c8e.ico">
+  <meta name="msapplication-TileColor" content="#5bbad5">
+  <meta name="msapplication-config" content="./src/images/seo/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- HTML Meta Tags -->
+  <title>Juan Pablo Candela</title>
+  <meta name="description"
+    content="Golf professional player, with full status on the Euro Pro Tour, qualify for the Challenge 2022 and DP World Tour.">
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="Juan Pablo Candela">
+  <meta itemprop="description"
+    content="Golf professional player, with full status on the Euro Pro Tour, qualify for the Challenge 2022 and DP World Tour.">
+  <meta itemprop="image" content="/src/images/cover/img_003_meta.png">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://www.candelagolf.com">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Juan Pablo Candela">
+  <meta property="og:description"
+    content="Golf professional player, with full status on the Euro Pro Tour, qualify for the Challenge 2022 and DP World Tour.">
+  <meta property="og:image" content="/src/images/cover/img_003_meta.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Juan Pablo Candela">
+  <meta name="twitter:description"
+    content="Golf professional player, with full status on the Euro Pro Tour, qualify for the Challenge 2022 and DP World Tour.">
+  <meta name="twitter:image" content="/src/images/cover/img_003_meta.png">
+  <script type="module" crossorigin src="/assets/index.15007290.js"></script>
+  <link rel="stylesheet" href="/assets/index.8bb2215f.css">
 </head>
+
 <body>
   <div id="root"></div>
   
 </body>
+
 </html>
