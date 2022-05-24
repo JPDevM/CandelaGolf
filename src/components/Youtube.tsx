@@ -7,10 +7,9 @@ export const Youtube = () => {
       {/* Main */}
       <iframe
         className="embed-responsive-item w-full h-96"
-        src="https://www.youtube.com/embed/_I26FAHxVEY;autoplay=1"
+        src="https://www.youtube.com/embed/_I26FAHxVEY"
         title="YouTube video player"
         frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />
     </Fragment>

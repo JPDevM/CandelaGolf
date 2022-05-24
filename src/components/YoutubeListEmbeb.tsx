@@ -1,12 +1,5 @@
 import React, { Fragment } from 'react';
 
-// export async function getServerSideProps() {
-//   return {
-//     props:
-  
-//   }  
-// }
-
 export const YoutubeList = () => {
   const links = [
     'https://www.youtube.com/embed/WbBbsPDF5OQ',
