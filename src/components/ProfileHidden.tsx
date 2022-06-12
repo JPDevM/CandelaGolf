@@ -6,7 +6,7 @@ import React, { Fragment } from 'react';
 const ProfileHidden = () => {
   return (
     <Fragment>
-      <h1 className='text-5xl text-green-500 bg-gray-200'>Hiden</h1>
+      {/* <h1 className='text-5xl text-green-500 bg-gray-200'>Hiden</h1> */}
     </Fragment>
   );
 };
