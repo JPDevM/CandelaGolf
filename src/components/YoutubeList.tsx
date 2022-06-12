@@ -3,10 +3,12 @@ import React, { Fragment, useState, useEffect } from 'react';
 
 // Youtube API 3: get latest videos
 // https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={CHANNEL_ID}&maxResults={RESULTS}&order=date&type=video&key={YOUR_API_KEY}
-// https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC8GCujkk3SVrAuUIZrnTsfA&maxResults=4&order=date&type=video&key=AIzaSyDjOdjKdRTQBwa2JQ382IJF54BKGcpy8vc
 const YOUTUBE_SEARCH_ITEMS_API = 'https://www.googleapis.com/youtube/v3/search';
 const CHANNEL_ID = 'UC8GCujkk3SVrAuUIZrnTsfA';
 const RESULTS = 4;
+const YOUTUBE = `${YOUTUBE_SEARCH_ITEMS_API}?part=snippet&channelId=${CHANNEL_ID}&maxResults=${RESULTS}&order=date&type=video&key=${
+  import.meta.env.VITE_YOUTUBE_APY_KEY
+}`;
 
 // console.log('VITE_YOUTUBE_APY_KEY: ', import.meta.env.VITE_YOUTUBE_APY_KEY);
 
@@ -26,14 +28,8 @@ const YoutubeList = () => {
   // Get results from Youtube API v3
   useEffect(() => {
     const fetchData = async () => {
-      // String final
-      // const response = await fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC8GCujkk3SVrAuUIZrnTsfA&maxResults=4&order=date&type=video&key=AIzaSyDjOdjKdRTQBwa2JQ382IJF54BKGcpy8vc");
 
-      const response = await fetch(
-        `${YOUTUBE_SEARCH_ITEMS_API}?part=snippet&channelId=${CHANNEL_ID}&maxResults=${RESULTS}&order=date&type=video&key=${
-          import.meta.env.VITE_YOUTUBE_APY_KEY
-        }`
-      );
+      const response = await fetch(`${YOUTUBE}`);
       if (!response.ok) {
         console.log(response.statusText);
       }
