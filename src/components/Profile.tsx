@@ -16,11 +16,12 @@ export const Profile = () => {
 
   return (
     <Fragment>
-      <div className="container mx-auto ">
-        {/* Title */}
+      <div className="container mx-auto">
+        {/* Main Screen */}
         <div className="p-4 flex flex-col justify-between h-screen">
+          {/* Title */}
           <div className="flex-none">
-            <h1 className="text-black  font-mono text-5xl tracking-wide text-center underline decoration-pink-500 decoration-4 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-900 to-lime-500">
+            <h1 className="text-black  font-mono text-5xl tracking-wide text-center underline decoration-pink-500 decoration-4 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-900 to-lime-500 drop-shadow-md shadow-black">
               Juan Pablo Candela
             </h1>
             <p className="pt-4">
@@ -28,27 +29,35 @@ export const Profile = () => {
               qualify for the Challenge 2022 and DP World Tour.
             </p>
           </div>
-          <div className="pt-4 flex-none">
 
+          {/* Logos */}
+          <div className="pt-4 flex-none">
             <div className="flex gap-8 justify-center">
               {Logos.map((Logo, Key) => (
                 <img
                   src={Logo}
                   className="h-12 grayscale hover:grayscale-0"
                   alt="pga europro tour logo"
-                  key={Key+Logo}
+                  key={Key + Logo}
                 />
               ))}
             </div>
           </div>
+
+          {/* Main Video */}
           <div className="pt-8 grow">
             <Youtube />
           </div>
+
+          {/* List */}
           <div className="pt-4 flex-none">
-            {/* List */}
             <YoutubeList />
           </div>
         </div>
+        {/* End Main Screen */}
+
+        {/* Hidden Screen use Scroll */}
+        {/* <div className="h-screen">Esto no se devería ver</div> */}
       </div>
     </Fragment>
   );

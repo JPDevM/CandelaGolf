@@ -2,10 +2,10 @@ import React, { Fragment } from 'react';
 
 export const YoutubeList = () => {
   const links = [
-    'https://www.youtube.com/embed/WbBbsPDF5OQ',
-    'https://www.youtube.com/embed/ziCTTnmGPzU',
-    'https://www.youtube.com/embed/7f_LjrrAuoo',
-    'https://www.youtube.com/embed/zND-seMFALA',
+    'https://www.youtube-nocookie.com/embed/0QyvZ7Iblqc',
+    'https://www.youtube-nocookie.com/embed/xlEH8apwBQ4',
+    'https://www.youtube-nocookie.com/embed/E3lB6AYa7WQ',
+    'https://www.youtube-nocookie.com/embed/BQgPCMzLoD8',
     // 'https://www.youtube-nocookie.com/embed/videoseries?controls=0&amp;list=PLhEZHRHHBAHjBvoxonXkma7zCwwKvQm95;autoplay=1',
     // 'https://www.youtube-nocookie.com/embed/videoseries?controls=0&amp;list=PLhEZHRHHBAHjBvoxonXkma7zCwwKvQm95;autoplay=1',
   ];

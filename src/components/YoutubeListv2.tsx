@@ -1,5 +1,5 @@
 // Dependences
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState } from 'react';
 
 // Youtube API 3: get latest videos
 // https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={CHANNEL_ID}&maxResults={RESULTS}&order=date&type=video&key={YOUR_API_KEY}
@@ -10,52 +10,54 @@ const RESULTS = 4;
 
 // console.log('VITE_YOUTUBE_APY_KEY: ', import.meta.env.VITE_YOUTUBE_APY_KEY);
 
-//test
-//www.mariokandut.com/how-to-fetch-data-with-react-hooks/
-//dev.to/antdp425/react-fetch-data-from-api-with-useeffect-27le
-
 const YoutubeList = () => {
+
   const [links, setLinks] = useState([
     { linkOk: 'https://www.youtube-nocookie.com/embed/0QyvZ7Iblqc' },
     { linkOk: 'https://www.youtube-nocookie.com/embed/xlEH8apwBQ4' },
     { linkOk: 'https://www.youtube-nocookie.com/embed/E3lB6AYa7WQ' },
     { linkOk: 'https://www.youtube-nocookie.com/embed/BQgPCMzLoD8' },
   ]);
-  const [data, setData] = useState([]);
 
   // Get results from Youtube API v3
-  useEffect(() => {
-    const fetchData = async () => {
-      // String final
-      // const response = await fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC8GCujkk3SVrAuUIZrnTsfA&maxResults=4&order=date&type=video&key=AIzaSyDjOdjKdRTQBwa2JQ382IJF54BKGcpy8vc");
+  let getData = async () => {
+    // String final
+    // const response = await fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC8GCujkk3SVrAuUIZrnTsfA&maxResults=4&order=date&type=video&key=AIzaSyDjOdjKdRTQBwa2JQ382IJF54BKGcpy8vc");
 
-      const response = await fetch(
-        `${YOUTUBE_SEARCH_ITEMS_API}?part=snippet&channelId=${CHANNEL_ID}&maxResults=${RESULTS}&order=date&type=video&key=${
-          import.meta.env.VITE_YOUTUBE_APY_KEY
-        }`
-      );
-      if (!response.ok) {
-        console.log(response.statusText);
-      }
-      const json = await response.json();
-      console.log('json: ', json);
-      setData(json);
-    };
-    fetchData();
-  }, [setData]);
+    const response = await fetch(
+      `${YOUTUBE_SEARCH_ITEMS_API}?part=snippet&channelId=${CHANNEL_ID}&maxResults=${RESULTS}&order=date&type=video&key=${
+        import.meta.env.VITE_YOUTUBE_APY_KEY
+      }`
+    );
+    if (!response.ok) {
+      console.log(response.statusText);
+    }
+    const data = await response.json();
+    console.log('data: ', data);
+    return data;
+  };
 
-  // Reemplazar links con nuevos 
-  console.log('data: ', data);
+  getData().then((data) => {
+    console.log('data: ', data);
+    var YoutubeID = [];
+    for (let i = 0; i < RESULTS; i++) {
+      YoutubeID.push({
+        linkOk:
+          'https://www.youtube-nocookie.com/embed/' + data.items[i].id.videoId,
+      });
+    }
+    console.log('YoutubeID: ', YoutubeID);
+    setLinks(YoutubeID);
+  });
 
-  
 
   return (
     <Fragment>
       {/* Grid */}
 
-      <div className="grid overflow-hidden grid-cols-1 grid-rows-1 md:grid-cols-4 md:grid-rows-1 gap-1 py-4">
+      <div className="grid overflow-hidden grid-cols-1 grid-rows-1 md:grid-cols-4 md:grid-rows-1 gap-2 p-4">
         {links.map((link, key) => (
-          <div className="box aspect-w-16 aspect-h-9" key={key}>
+          <div className="box" key={key}>
             <iframe
               className="embed-responsive-item w-full"
               src={link.linkOk}

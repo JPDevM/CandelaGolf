@@ -3,8 +3,12 @@ import Carousel from 'nuka-carousel';
 
 import Profile1 from '../images/profile/profile-1.jpg';
 import Profile2 from '../images/profile/profile-2.jpg';
+import Profile3 from '../images/profile/profile-3.jpg';
 
 export const Media = () => {
+  var profileImg = new Array();
+  profileImg = [Profile1, Profile2, Profile3];
+
   return (
     <Fragment>
       {/* <div
@@ -61,18 +65,18 @@ export const Media = () => {
             Siguiente
           </button>
         )}
+        wrapAround={true}
         autoplay={true}
+        autoplayInterval={4000}
       >
-        <img
-          src={Profile1}
-          className="h-screen transition ease-in-out delay-50 hover:scale-105 duration-300"
-          alt="Profile image of Juan Pablo Candela"
-        />
-        <img
-          src={Profile2}
-          className="h-screen transition ease-in-out delay-50 hover:scale-105 duration-300"
-          alt="Profile image of Juan Pablo Candela"
-        />
+        {profileImg.map((img, key) => (
+          <img
+            src={img}
+            key={key}
+            className="object-cover h-screen transition ease-in-out delay-50 hover:scale-105 duration-300"
+            alt="Profile image of Juan Pablo Candela"
+          />
+        ))}
       </Carousel>
     </Fragment>
   );
