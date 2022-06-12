@@ -1,9 +1,16 @@
+// Dependencies
 import React, { Fragment } from 'react';
 import Carousel from 'nuka-carousel';
+import {
+  ChevronDoubleLeftIcon,
+  ChevronDoubleRightIcon,
+} from '@heroicons/react/solid';
 
+// Media
 import Profile1 from '../images/profile/profile-1.jpg';
 import Profile2 from '../images/profile/profile-2.jpg';
 import Profile3 from '../images/profile/profile-3.jpg';
+import Ball from '../images/seo/favicon/android-chrome-256x256.png';
 
 export const Media = () => {
   var profileImg = new Array();
@@ -56,14 +63,38 @@ export const Media = () => {
 
       <Carousel
         renderCenterLeftControls={({ previousSlide }) => (
-          <button onClick={previousSlide} className="text-white p-4 shadow">
-            Anterior
+          <button onClick={previousSlide} className="p-4 flex">
+            <ChevronDoubleLeftIcon className="w-8 text-gray-200" />
+            <img className="w-8" alt="golf ball" src={Ball} />
           </button>
         )}
         renderCenterRightControls={({ nextSlide }) => (
-          <button onClick={nextSlide} className="text-white p-4 shadow">
-            Siguiente
+          <button onClick={nextSlide} className="p-4 flex">
+            <img className="w-8" alt="golf ball" src={Ball} />
+            <ChevronDoubleRightIcon className="w-8 text-gray-200" />
           </button>
+        )}
+        renderBottomCenterControls={({
+          slideCount,
+          currentSlide,
+          goToSlide,
+        }) => (
+          <div className="flex gap-4">
+              {[...Array(slideCount)].map((e, key) => (
+                <div
+                className={currentSlide == key ? 'active' : undefined}
+                  key={key}
+                >
+                  <button
+                    type="button"
+                    aria-label="slide 1 bullet"
+                    onClick={() => goToSlide(key)}
+                  >
+                    <img className="w-4" alt="golf ball" src={Ball} />
+                  </button>
+                </div>
+              ))}
+          </div>
         )}
         wrapAround={true}
         autoplay={true}

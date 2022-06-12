@@ -1,10 +1,12 @@
+// Dependences
 import React, { Fragment } from 'react';
 
-export const Youtube = () => {
+// Media
+const Youtube = () => {
   return (
     <Fragment>
       {/* Main */}
-      <div className="bg-gray-600 aspect-w-16 aspect-h-9">
+      <div className="aspect-w-16 aspect-h-9">
         <iframe
           className=""
           src="https://www.youtube.com/embed/_I26FAHxVEY"

@@ -2,8 +2,9 @@
 import React, { Fragment } from 'react';
 
 // Components
-import Youtube from '../components/Youtube';
+import Youtube from './Youtube';
 import YoutubeList from './YoutubeList';
+import ProfileHidden from './ProfileHidden';
 
 // Media
 import Logo1 from '../images/logo/logo1.png';
@@ -36,7 +37,7 @@ export const Profile = () => {
               {Logos.map((Logo, Key) => (
                 <img
                   src={Logo}
-                  className="h-12 grayscale hover:grayscale-0"
+                  className="h-8 sm:h-12 md:h-6 lg:h-10 xl:h-12 grayscale hover:grayscale-0"
                   alt="pga europro tour logo"
                   key={Key + Logo}
                 />
@@ -45,19 +46,19 @@ export const Profile = () => {
           </div>
 
           {/* Main Video */}
-          <div className="pt-8 grow">
+          <div className="grow pt-4">
             <Youtube />
           </div>
 
           {/* List */}
-          <div className="pt-4 flex-none">
+          <div className="flex-none ">
             <YoutubeList />
           </div>
         </div>
         {/* End Main Screen */}
 
         {/* Hidden Screen use Scroll */}
-        {/* <div className="h-screen">Esto no se devería ver</div> */}
+        <ProfileHidden />
       </div>
     </Fragment>
   );
