@@ -9,15 +9,15 @@ import BgBalls from '../images/svg/overlapping-circles.svg';
 const HeroHiddenSection = () => {
   return (
     <Fragment>
-      <div className="m-4">
-        <p className="text-3xl text-black pb-4">
+      <div className="m-4 pt-8">
+        <p className="text-2xl sm:text-3xl text-black">
           Mejora tu golf ahora.
           <br />
           Disfruta de este gran deporte.
         </p>
       </div>
-      <div className="flex m-4">
-        <div className="w-2/3 pr-4">
+      <div className="flex flex-col-reverse sm:flex-row m-4 pb-8">
+        <div className="whit-full sm:w-1/2 sm:pr-4 md:w-2/3 lg:w-1/2 pt-4 sm:pt-0">
           <p className="text-md text-gray-600 text-justify">
             Bienvenido a nuestro espacio, en la cual podrá encontrar lo
             necesario para{' '}
@@ -33,15 +33,13 @@ const HeroHiddenSection = () => {
           </p>
         </div>
         <div
-          className="w-1/3"
-          style={{
-            backgroundImage: `url(${BgBalls})`,
-          }}
+          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/2"
+          style={{ backgroundImage: `url(${BgBalls})` }}
         >
-          <div className="p-4 flex justify-center">
+          <div className="p-4 flex justify-center w-full max-h-44 sm:max-h-56">
             <img
               src={ImageFace}
-              className="shadow rounded-lg w-40 border-8 border-white"
+              className="rounded-lg object-contain flex"
               alt="Photo Face Juan Pablo Candela"
             />
           </div>

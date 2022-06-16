@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react'
 
 // Media
-import GolfFieldImg from '../images/GolfField.png'
+import GolfFieldImg from '../images/golfField.png'
 
 const Footer = () => {
   return (

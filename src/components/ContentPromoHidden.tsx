@@ -8,11 +8,13 @@ import GolfImg2 from '../images/golfista.png';
 const ContentPromoHidden = () => {
   return (
     <Fragment>
+      {/* Title */}
       <div className="m-4 pt-8">
-        <p className="text-3xl text-black pb-4">
+        <p className="text-2xl sm:text-3xl text-black pb-4">
           !Evoluciona tu golf hasta donde quieras!
         </p>
       </div>
+      {/* Subtitle */}
       <div className="m-4">
         <p className="text-md text-gray-600">
           Estamos preparado para acompañarte en un proceso de mejora continua de

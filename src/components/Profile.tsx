@@ -11,7 +11,7 @@ import Logo1 from '../images/logo/logo1.png';
 import Logo2 from '../images/logo/logo2.png';
 import Logo3 from '../images/logo/logo3.jpg';
 import Logo4 from '../images/logo/logo4.png';
-import Sponsor01 from '../images/logo/logo4.png';
+import Sponsor01 from '../images/logo/LogoSponsor01.png';
 
 export const Profile = () => {
   const Logos = [Logo1, Logo2, Logo3, Logo4];
@@ -21,7 +21,7 @@ export const Profile = () => {
     <Fragment>
       <div className="container mx-auto">
         {/* Main Screen */}
-        <div className="p-4 flex flex-col justify-between h-screen sm:h-auto md:h-screen">
+        <div className="p-4 flex flex-col justify-between h-auto md:h-screen">
           {/* Title */}
           <div className="flex-none">
             <h1 className="text-black font-mono text-3xl sm:text-5xl lg:text-3xl xl:text-5xl tracking-wide text-center underline decoration-pink-500 decoration-4 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-900 to-lime-500 drop-shadow-md shadow-black">
@@ -35,7 +35,7 @@ export const Profile = () => {
 
           {/* Logos */}
           <div className="pt-4 flex-none">
-            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-2 xl:grid-cols-4 gap-4 place-items-center">
+            <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-4 gap-4 place-items-center">
               {Logos.map((Logo, Key) => (
                 <img
                   src={Logo}
@@ -44,14 +44,14 @@ export const Profile = () => {
                   key={Key + Logo}
                 />
               ))}
-              <div className="w-full h-full col-span-2 sm:col-span-4 md:col-span-1 lg:col-span-2 xl:col-span-4">
-                <div className="w-full bg-gradient-to-l from-lime-600 to-transparent flex flex-row items-center justify-around py-2">
+              <div className="w-full h-full col-span-4 md:col-span-1 lg:col-span-4 xl:col-span-4">
+                <div className="w-full bg-gradient-to-r from-lime-600 to-transparent flex flex-row items-center justify-around py-2">
                   <img
                     src={Sponsors[0]}
                     className="h-8 sm:h-12 md:h-6 lg:h-10 xl:h-12"
                     alt="Sponsor logo"
                   />
-                  <p className="text-white text-center text-md text">Sponsor</p>
+                  <p className="text-gray-500 font-bold text-left text-xl text">Sponsor</p>
                 </div>
               </div>
             </div>
