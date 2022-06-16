@@ -63,15 +63,21 @@ export const Media = () => {
 
       <Carousel
         renderCenterLeftControls={({ previousSlide }) => (
-          <button onClick={previousSlide} className="p-4 flex">
-            <ChevronDoubleLeftIcon className="w-8 text-gray-200" />
+          <button
+            onClick={previousSlide}
+            className="p-4 flex text-gray-400 hover:text-white"
+          >
+            <ChevronDoubleLeftIcon className="w-8" />
             <img className="w-8" alt="golf ball" src={Ball} />
           </button>
         )}
         renderCenterRightControls={({ nextSlide }) => (
-          <button onClick={nextSlide} className="p-4 flex">
+          <button
+            onClick={nextSlide}
+            className="p-4 flex text-gray-400 hover:text-white"
+          >
             <img className="w-8" alt="golf ball" src={Ball} />
-            <ChevronDoubleRightIcon className="w-8 text-gray-200" />
+            <ChevronDoubleRightIcon className="w-8" />
           </button>
         )}
         renderBottomCenterControls={({
@@ -80,20 +86,24 @@ export const Media = () => {
           goToSlide,
         }) => (
           <div className="flex gap-4">
-              {[...Array(slideCount)].map((e, key) => (
-                <div
+            {[...Array(slideCount)].map((e, key) => (
+              <div
                 className={currentSlide == key ? 'active' : undefined}
-                  key={key}
+                key={key}
+              >
+                <button
+                  type="button"
+                  aria-label="slide 1 bullet"
+                  onClick={() => goToSlide(key)}
                 >
-                  <button
-                    type="button"
-                    aria-label="slide 1 bullet"
-                    onClick={() => goToSlide(key)}
-                  >
-                    <img className="w-4" alt="golf ball" src={Ball} />
-                  </button>
-                </div>
-              ))}
+                  <img
+                    className="w-4 hover:transform hover:scale-150 duration-100"
+                    alt="golf ball"
+                    src={Ball}
+                  />
+                </button>
+              </div>
+            ))}
           </div>
         )}
         wrapAround={true}

@@ -19,7 +19,7 @@ export const Profile = () => {
     <Fragment>
       <div className="container mx-auto">
         {/* Main Screen */}
-        <div className="p-4 flex flex-col justify-between h-screen">
+        <div className="p-4 flex flex-col justify-between md:h-screen">
           {/* Title */}
           <div className="flex-none">
             <h1 className="text-black  font-mono text-5xl tracking-wide text-center underline decoration-pink-500 decoration-4 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-900 to-lime-500 drop-shadow-md shadow-black">
@@ -58,7 +58,9 @@ export const Profile = () => {
         {/* End Main Screen */}
 
         {/* Hidden Screen use Scroll */}
-        <ProfileHidden />
+        <div className="">
+          <ProfileHidden />
+        </div>
       </div>
     </Fragment>
   );
