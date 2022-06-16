@@ -15,9 +15,9 @@ export const YoutubeList = () => {
 
       <div className="grid overflow-hidden grid-cols-1 grid-rows-1 md:grid-cols-4 md:grid-rows-1 gap-2 p-4">
         {links.map((link, key) => (
-          <div className="box" key={key+link}>
+          <div className="box" key={key + link}>
             <iframe
-              className="embed-responsive-item w-full"
+              className="embed-responsive-item w-full bg-gray-200"
               src={link}
               title="YouTube video player"
               frameBorder="0"

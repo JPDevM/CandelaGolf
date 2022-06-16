@@ -18,14 +18,18 @@ const HeroHiddenSection = () => {
       </div>
       <div className="flex m-4">
         <div className="w-2/3 pr-4">
-          <p className="text-md text-gray-500">
+          <p className="text-md text-gray-600 text-justify">
             Bienvenido a nuestro espacio, en la cual podrá encontrar lo
-            necesario para mejorar muy rápidamente su performance en el golf,
-            este deporte que tanto amamos y tanto tiempo nos lleva dominar.
-            Permanente incorporamos lecciones con recomendaciones prácticas, que
-            podrá utilizara su día a día, tanto en la práctica como en el campo.
-            Nuestro objetivo es que el disfrute de este deporte, sea permanente,
-            incluso en los momentos que toca aprender.
+            necesario para{' '}
+            <span className="text-lime-700 font-bold text-lg"> mejorar </span>
+            muy rápidamente su performance en el golf, este deporte que tanto
+            amamos y tanto tiempo nos lleva dominar. Permanente incorporamos
+            lecciones con recomendaciones prácticas, que podrá utilizara su día
+            a día, tanto en la práctica como en el campo. Nuestro objetivo es
+            que el{' '}
+            <span className="text-lime-700 font-bold text-lg">disfrute </span>de
+            este deporte, sea permanente, incluso en los momentos que toca
+            aprender.
           </p>
         </div>
         <div

@@ -15,11 +15,17 @@ const AnalisysPromoHidden = () => {
         </p>
       </div>
       <div className="flex p-4">
-        <p className="w-1/2 text-md text-gray-500">
+        <p className="w-1/2 text-md text-gray-600 text-justify pr-4">
           Si quieres mejorar tu desempeño en el campo de manera sencilla, te
-          ofrecemos la posibilidad de que recibas un análisis completo y
-          detallado de tu golpe con recomendaciones de como corregirlo y
-          mejorarlo, apoyado de tecnología de BigData & Inteligencia Artificial
+          ofrecemos la posibilidad de que recibas un{' '}
+          <span className="text-lime-700 font-bold text-lg">
+            análisis completo{' '}
+          </span>
+          y detallado de tu golpe con recomendaciones de como corregirlo y
+          mejorarlo, apoyado de tecnología de{' '}
+          <span className="text-lime-700 font-bold text-lg">
+            BigData & Inteligencia Artificial
+          </span>
         </p>
         <div className="w-1/2 grid grid-cols-3 gap-2">
           <img

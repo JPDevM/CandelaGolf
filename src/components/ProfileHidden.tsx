@@ -7,6 +7,7 @@ import BannerGTS from './BannerGTSHidden';
 import Promo1 from './ContentPromoHidden'
 import Promo2 from './AnalisysPromoHidden'
 import PromoDatabase from './DatabasePromoHidden'
+import Footer from './Footer';
 
 
 const ProfileHidden = () => {
@@ -17,6 +18,7 @@ const ProfileHidden = () => {
       <Promo1 />
       <Promo2 />
       <PromoDatabase />
+      <Footer />
     </Fragment>
   );
 };

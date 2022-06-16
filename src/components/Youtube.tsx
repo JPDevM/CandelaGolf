@@ -6,7 +6,7 @@ const Youtube = () => {
   return (
     <Fragment>
       {/* Main */}
-      <div className="aspect-w-16 aspect-h-9">
+      <div className="aspect-w-16 aspect-h-9 bg-gray-200">
         <iframe
           className=""
           src="https://www.youtube.com/embed/wF5MzSjO9Ag"

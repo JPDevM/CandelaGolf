@@ -50,7 +50,7 @@ const YoutubeList = () => {
       {/* Grid */}
       <div className="justify-self-end grid overflow-hidden grid-cols-2 grid-rows-1 md:grid-cols-4 md:grid-rows-1 gap-1 pt-4">
         {links.map((link, key) => (
-          <div className="box aspect-w-16 aspect-h-9" key={key}>
+          <div className="box aspect-w-16 aspect-h-9 bg-gray-200" key={key}>
             <iframe
               className="embed-responsive-item w-full"
               src={link.linkOk}
