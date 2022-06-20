@@ -59,11 +59,11 @@ const Footer = () => {
             <div className="hidden sm:flex flex-col justify-end gap-1 sm:gap-2">
               <div className="flex items-center gap-2 text-right">
                 <a
-                  href="mailto:somemail@gmail.com"
+                  href="mailto:juanpablocandela@gmail.com"
                   target="_blank"
                   className="truncate text-black text-xs sm:text-sm"
                 >
-                  somemail@gmail.com
+                  juanpablocandela@gmail.com
                 </a>
               </div>
               <p className="truncate text-white font-semibold font-mono text-xs sm:text-sm text-right m-2">

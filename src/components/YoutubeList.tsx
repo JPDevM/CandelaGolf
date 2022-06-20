@@ -18,10 +18,10 @@ const YOUTUBE = `${YOUTUBE_SEARCH_ITEMS_API}?part=snippet&channelId=${CHANNEL_ID
 
 const YoutubeList = () => {
   const [links, setLinks] = useState([
+    { linkOk: 'https://www.youtube-nocookie.com/embed/3TGMV0HejQQ' },
     { linkOk: 'https://www.youtube-nocookie.com/embed/0QyvZ7Iblqc' },
     { linkOk: 'https://www.youtube-nocookie.com/embed/xlEH8apwBQ4' },
     { linkOk: 'https://www.youtube-nocookie.com/embed/E3lB6AYa7WQ' },
-    { linkOk: 'https://www.youtube-nocookie.com/embed/BQgPCMzLoD8' },
   ]);
   const [data, setData] = useState([]);
 

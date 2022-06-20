@@ -19,8 +19,8 @@ export const Profile = () => {
               Juan Pablo Candela
             </h1>
             <p className="pt-2 sm:pt-4 text-sm sm:text-md">
-              Professional golf player, with full status on the Euro Pro Tour,
-              qualify for the Challenge 2022 and DP World Tour.
+              Professional golf player with full status on the Euro Pro Tour,
+              seeking to qualify for the Challenge and DP World Tour 2023.
             </p>
           </div>
 
