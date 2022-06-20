@@ -11,7 +11,7 @@ const DatabasePromoHidden = () => {
   return (
     <Fragment>
       {/* title */}
-      <div className="m-4 pt-8">
+      <div id='database' className="m-4 pt-8">
         <p className="text-2xl sm:text-3xl text-black pb-4">
           La mayor base de datos de golf de PGA Tour
         </p>

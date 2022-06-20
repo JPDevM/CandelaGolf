@@ -6,13 +6,13 @@ import AnalisysImg01 from '../images/analisys/analisys01.png';
 import AnalisysImg02 from '../images/analisys/analisys02.png';
 import AnalisysImg03 from '../images/analisys/analisys03.png';
 
-const Analisys = [AnalisysImg01, AnalisysImg02, AnalisysImg03];
+const Analisys = [AnalisysImg02, AnalisysImg03, AnalisysImg01];
 
 const AnalisysPromoHidden = () => {
   return (
     <Fragment>
       {/* Title */}
-      <div className="m-4 pt-8">
+      <div id='analisis' className="m-4 pt-8">
         <p className="text-2xl sm:text-3xl text-black pb-4">
           Análisis y recomendaciones para correjir tu golpe
         </p>

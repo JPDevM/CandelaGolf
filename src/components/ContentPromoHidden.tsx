@@ -30,11 +30,15 @@ const ContentPromoHidden = () => {
           </span>
         </p>
       </div>
+
       <div className="m-4">
         {/* Sección 1 */}
-        <div className="w-full py-4 h-40 relative flex flex-wrap content-center">
+        <div
+          id="cursos"
+          className="w-full py-4 h-40 relative flex flex-wrap content-center"
+        >
           <div className="w-full bg-gradient-to-r from-green-900 to-lime-600 p-4 flex rounded-lg shadow-xl border-2 border-white">
-            <p className="pl-48 text-right text-white tracking-wide">
+            <p className="pl-32 sm:pl-44 text-sm sm:text-md text-right text-white tracking-wide">
               <span className="font-extrabold text-lg">Curso </span>completo,
               donde podrá aprender y dominar todos los conceptos necesarios para
               comprender el Golf, con una explicación sencilla y directa.{' '}
@@ -45,15 +49,18 @@ const ContentPromoHidden = () => {
           </div>
 
           <img
-            className="h-40 absolute top-0 left-4"
+            className="h-28 sm:h-40 absolute top-0 left-4 "
             src={GolfImg2}
             alt="Golf ground"
           />
         </div>
+
         {/* Sección 2 */}
-        <div className="w-full py-4 h-40 relative flex flex-wrap content-center">
+        <div
+          id='ejercicios'
+          className="w-full py-4 h-40 relative flex flex-wrap content-center">
           <div className="w-full bg-gradient-to-l from-green-900 to-lime-500 p-4 flex rounded-lg shadow-xl border-2 border-white">
-            <p className="pr-24 text-left text-white tracking-wide">
+            <p className="pr-24 text-left text-white text-sm sm:text-md tracking-wide">
               <span className="font-extrabold text-lg">Plantillas </span>de
               práctica, con planes de ejercicios específicos para la corrección
               de los aspectos claves del juego, según tu nivel y necesidad.{' '}
